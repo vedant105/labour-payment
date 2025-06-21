@@ -1,0 +1,161 @@
+/* 🌐 Global Reset and Font */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  color: #333;
+}
+
+/* 🔝 Header */
+header {
+  background-color: #1f2937;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#aboutBtn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+#aboutBtn:hover {
+  color: #60a5fa;
+}
+
+/* 🏷️ Headings */
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  color: #111827;
+}
+h2 {
+  color: #1f2937;
+  border-left: 4px solid #3b82f6;
+  padding-left: 10px;
+}
+
+/* 📦 Sections */
+.form-section,
+.table-section,
+.summary-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 750px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* 📥 Inputs */
+input {
+  padding: 10px;
+  margin: 8px 6px;
+  width: calc(25% - 12px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+input[type="date"] {
+  width: calc(30% - 12px);
+}
+
+/* ✅ Button */
+button {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #2563eb;
+}
+
+/* 📊 Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+th {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* 📈 Summary */
+.summary-section p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+  color: #111827;
+}
+
+/* 📦 Modal (About) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: slideUp 0.4s ease;
+}
+.close {
+  color: #999;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+.close:hover {
+  color: #000;
+}
+
+/* 🎞️ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 📱 Responsive for Mobile */
+@media (max-width: 768px) {
+  input {
+    width: 100%;
+    margin: 8px 0;
+  }
+  input[type="date"] {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

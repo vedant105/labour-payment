@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Labour Payment App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🔝 Header -->
+  <header>
+    <button id="aboutBtn" title="About this App">ℹ️</button>
+  </header>
+
+  <h1>Labour Payment Tracker</h1>
+
+  <!-- 📥 Payment Entry Form -->
+  <section class="form-section">
+    <h2>Payment Entry</h2>
+    <input type="text" id="labourName" placeholder="Labour Name">
+    <input type="number" id="labourCount" placeholder="Number of Labourers">
+    <input type="number" id="paymentAmount" placeholder="Amount ₹">
+    <input type="number" id="hoursWorked" placeholder="Hours Worked">
+    <input type="date" id="paymentDate">
+    <button onclick="addPayment()">Add Payment</button>
+  </section>
+
+  <!-- 📈 Total Summary -->
+  <section class="summary-section">
+    <h2>Total Summary</h2>
+    <p id="totalPaid">Total Paid: ₹0</p>
+    <p id="totalLabourers">Total Labourers Paid: 0</p>
+  </section>
+
+  <!-- 📊 Payment History Table -->
+  <section class="table-section">
+    <h2>Payment History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Labour Name</th>
+          <th>No. of Labourers</th>
+          <th>Amount ₹</th>
+          <th>Hours</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="paymentTableBody">
+        <!-- Rows filled by JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ℹ️ About Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAbout()">&times;</span>
+      <h2>About Labour Payment App</h2>
+      <p>This app helps you record and track payments to groups of labourers.</p>
+      <ul>
+        <li>Enter a labour group or name</li>
+        <li>Record number, hours, and payment</li>
+        <li>Track total paid and labourers</li>
+      </ul>
+      <p>Perfect for farms, construction, or daily wage workers.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
